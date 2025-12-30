@@ -1,139 +1,93 @@
-# Projet JEE - Digital Banking Backend
+# Projet JEE - Partie Backend
 
-## Description
-Application backend de gestion bancaire développée en **Java EE** permettant la gestion complète des clients, des comptes bancaires (courants/épargne) et des opérations financières (dépôts/retraits).
+Ce projet est la partie **backend** d’une application de gestion bancaire. Il est développé avec **Spring Boot 3**, utilise **Spring Data JPA** pour l’accès à la base de données et expose des **web services RESTful**. L’API est documentée via **Swagger**.
 
-## Technologies Utilisées
-- **Backend** : Java EE (JAX-RS, JPA, CDI)
-- **Base de données** : MySQL
-- **Build Tool** : Maven
-- **Documentation API** : Swagger/OpenAPI
-- **Serveur d'application** : WildFly/Payara
+## Technologies utilisées
 
-## Structure de la Base de Données
-Base de données relationnelle MySQL avec les tables principales :
-- `Client` - Informations des clients
-- `Compte` - Comptes bancaires (courant/épargne)
-- `Operation` - Historique des transactions
-- Relations bien définies entre les entités
+* Java 17 
+* Spring Boot 3
+* Spring Data JPA
+* Hibernate
+* MySQL / H2 (base de données)
+* Spring Web (REST API)
+* Springdoc OpenAPI (Swagger UI)
 
-## API Endpoints
+## Structure du projet
 
-### **Gestion des Comptes Bancaires**
-| Méthode | Endpoint | Description | Swagger |
-|---------|----------|-------------|---------|
-| **GET** | `/api/comptes` | Liste tous les comptes | Oui |
-| **GET** | `/api/comptes/{id}` | Détails d'un compte par ID | Oui |
-| **GET** | `/api/comptes/{id}/operations` | Opérations d'un compte | Oui |
-| **GET** | `/api/comptes/{id}/page-operations` | Opérations paginées | Oui |
-| **POST** | `/api/comptes` | Créer un nouveau compte | Oui |
-| **POST** | `/api/comptes/{id}/depot` | Effectuer un dépôt | Oui |
-| **POST** | `/api/comptes/{id}/retrait` | Effectuer un retrait | Oui |
-
-### **Gestion des Clients**
-| Méthode | Endpoint | Description | Swagger |
-|---------|----------|-------------|---------|
-| **GET** | `/api/clients` | Liste tous les clients | Oui |
-| **GET** | `/api/clients/{id}` | Client par ID | Oui |
-| **GET** | `/api/clients/search` | Recherche par mot-clé | Oui |
-
-## Installation & Déploiement
-
-### Prérequis
-- Java JDK 17
-- MySQL Server 5.7+
-- Maven 3.6+
-- Serveur d'application Java EE (WildFly 23+ recommandé)
-
-### Étapes d'installation
-1. **Cloner le projet**
-   ```bash
-   git clone [url-du-projet]
-   cd digital-banking-backend
-   ```
-
-2. **Configurer la base de données**
-   ```sql
-   CREATE DATABASE digital_banking;
-   CREATE USER 'bankadmin'@'localhost' IDENTIFIED BY 'password';
-   GRANT ALL PRIVILEGES ON digital_banking.* TO 'bankadmin'@'localhost';
-   FLUSH PRIVILEGES;
-   ```
-
-3. **Configurer les paramètres de connexion**
-   - Modifier `src/main/resources/META-INF/persistence.xml`
-   ```xml
-   <jdbc-url>jdbc:mysql://localhost:3306/digital_banking</jdbc-url>
-   <username>bankadmin</username>
-   <password>password</password>
-   ```
-
-4. **Compiler et empaqueter**
-   ```bash
-   mvn clean package
-   ```
-
-5. **Déployer sur le serveur**
-   - Copier le fichier `.war` génré dans le dossier `target/`
-   - Déployer sur votre serveur WildFly/Payara
-
-## Utilisation
-
-### Accès aux interfaces
-- **API REST** : `http://localhost:8080/digital-banking/api`
-- **Swagger UI** : `http://localhost:8080/digital-banking/swagger-ui`
-- **Base de données** : `localhost:3306/digital_banking`
-
-### Exemple de requête API
-```bash
-# Liste des comptes
-curl -X GET "http://localhost:8080/digital-banking/api/comptes"
-
-# Détails d'un client
-curl -X GET "http://localhost:8080/digital-banking/api/clients/1"
+```
+src/main/java
+├── org.sid.ebankingbackend
+│   ├── entities
+│   │   ├── Customer.java
+│   │   ├── BankAccount.java
+│   │   ├── SavingAccount.java
+│   │   ├── CurrentAccount.java
+│   │   └── AccountOperation.java
+│   │
+│   ├── repositories
+│   │   ├── CustomerRepository.java
+│   │   ├── BankAccountRepository.java
+│   │   └── AccountOperationRepository.java
+│   │
+│   ├── services
+│   │   ├── BankAccountService.java
+│   │   └── CustomerService.java
+│   │
+│   ├── dtos
+│   │   ├── CustomerDTO.java
+│   │   └── BankAccountDTO.java
+│   │
+│   ├── controllers
+│   │   ├── CustomerRestController.java
+│   │   └── BankAccountRestController.java
+│   │
+│   └── EbankingBackendApplication.java
 ```
 
-## Fonctionnalités Implémentées
+## Étapes réalisées
 
-### **Gestion des Comptes**
-- [x] Création de comptes (courant/épargne)
-- [x] Consultation des soldes
-- [x] Historique des opérations
-- [x] Opérations de dépôt/retrait
-- [x] Pagination des transactions
+1. **Création du projet Spring Boot**
+   Utilisation de Spring Initializr avec les dépendances **Spring Web** et **Spring Data JPA**.
 
-### **Gestion des Clients**
-- [x] Inscription des clients
-- [x] Recherche multicritères
-- [x] Consultation des détails
-- [x] Association client-compte
+2. **Création des entités JPA**
 
-### **Sécurité & Validation**
-- [x] Validation des données
-- [x] Gestion des erreurs
-- [x] Contrôle des soldes
-- [x] Journalisation des opérations
+   * `Customer`
+   * `BankAccount` (classe abstraite)
+   * `SavingAccount` et `CurrentAccount` (héritage de BankAccount)
+   * `AccountOperation`
 
-## Tests API avec Swagger
-1. Accédez à l'interface Swagger : `http://localhost:8080/digital-banking/swagger-ui`
-2. Explorez les endpoints disponibles
-3. Testez les opérations directement depuis l'interface
-4. Consultez les modèles de données
+3. **Création des repositories Spring Data**
 
-## Structure du Projet
+   * `CustomerRepository`
+   * `BankAccountRepository`
+   * `AccountOperationRepository`
+
+4. **Tests de la couche DAO**
+
+   * Insertion, mise à jour et récupération d’objets via les repositories.
+
+5. **Couche Service et DTOs**
+
+   * `BankAccountService` et `CustomerService` pour la logique métier.
+   * DTOs (`CustomerDTO`, `BankAccountDTO`) pour exposer uniquement les données nécessaires via l’API.
+
+6. **Création des contrôleurs REST**
+
+   * `CustomerRestController` et `BankAccountRestController` pour gérer les endpoints REST.
+
+7. **Tests des web services REST**
+
+   * Vérification avec **Postman** ou Swagger UI.
+
+## Swagger UI
+
+Une fois le projet lancé, la documentation des API est disponible à l’URL suivante :
+
 ```
-src/
-├── main/
-│   ├── java/
-│   │   ├── com/banking/entities/       # Entités JPA
-│   │   ├── com/banking/services/       # Services métier
-│   │   ├── com/banking/controllers/    # Contrôleurs REST
-│   │   └── com/banking/config/         # Configuration
-│   └── resources/
-│       └── META-INF/
-│           └── persistence.xml         # Config JPA
-└── test/                               # Tests unitaires
+http://localhost:8085/swagger-ui.html
 ```
+
+Swagger permet de tester facilement toutes les routes REST exposées par le backend.
 
 ## Auteur
 **Réalisé par : Rania Kettani**
