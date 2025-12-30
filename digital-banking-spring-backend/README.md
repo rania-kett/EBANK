@@ -1,4 +1,4 @@
-# Projet JEE - Partie Backend
+w# Projet JEE - Partie Backend
 
 Ce projet est la partie **backend** d’une application de gestion bancaire. Il est développé avec **Spring Boot 3**, utilise **Spring Data JPA** pour l’accès à la base de données et expose des **web services RESTful**. L’API est documentée via **Swagger**.
 
@@ -88,6 +88,8 @@ http://localhost:8085/swagger-ui.html
 ```
 
 Swagger permet de tester facilement toutes les routes REST exposées par le backend.
+<img width="912" height="425" alt="image" src="https://github.com/user-attachments/assets/cad840f0-d08e-4e4f-a9cc-fbde5be6b53e" />
+
 
 ## Auteur
 **Réalisé par : Rania Kettani**
