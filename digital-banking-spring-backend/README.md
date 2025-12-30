@@ -33,14 +33,14 @@ Base de données relationnelle MySQL avec les tables principales :
 ### **Gestion des Clients**
 | Méthode | Endpoint | Description | Swagger |
 |---------|----------|-------------|---------|
-| **GET** | `/api/clients` | Liste tous les clients | ✅ |
-| **GET** | `/api/clients/{id}` | Client par ID | ✅ |
-| **GET** | `/api/clients/search` | Recherche par mot-clé | ✅ |
+| **GET** | `/api/clients` | Liste tous les clients | Oui |
+| **GET** | `/api/clients/{id}` | Client par ID | Oui |
+| **GET** | `/api/clients/search` | Recherche par mot-clé | Oui |
 
 ## Installation & Déploiement
 
 ### Prérequis
-- Java JDK 8 ou supérieur
+- Java JDK 17
 - MySQL Server 5.7+
 - Maven 3.6+
 - Serveur d'application Java EE (WildFly 23+ recommandé)
@@ -77,7 +77,7 @@ Base de données relationnelle MySQL avec les tables principales :
    - Copier le fichier `.war` génré dans le dossier `target/`
    - Déployer sur votre serveur WildFly/Payara
 
-## 📖 Utilisation
+## Utilisation
 
 ### Accès aux interfaces
 - **API REST** : `http://localhost:8080/digital-banking/api`
