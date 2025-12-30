@@ -1,43 +1,43 @@
-# 🏦 Projet JEE - Digital Banking Backend
+# Projet JEE - Digital Banking Backend
 
-## 📖 Description
+## Description
 Application backend de gestion bancaire développée en **Java EE** permettant la gestion complète des clients, des comptes bancaires (courants/épargne) et des opérations financières (dépôts/retraits).
 
-## 🛠️ Technologies Utilisées
+## Technologies Utilisées
 - **Backend** : Java EE (JAX-RS, JPA, CDI)
 - **Base de données** : MySQL
 - **Build Tool** : Maven
 - **Documentation API** : Swagger/OpenAPI
 - **Serveur d'application** : WildFly/Payara
 
-## 📊 Structure de la Base de Données
+## Structure de la Base de Données
 Base de données relationnelle MySQL avec les tables principales :
 - `Client` - Informations des clients
 - `Compte` - Comptes bancaires (courant/épargne)
 - `Operation` - Historique des transactions
 - Relations bien définies entre les entités
 
-## 🌐 API Endpoints
+## API Endpoints
 
-### 🏦 **Gestion des Comptes Bancaires**
+### **Gestion des Comptes Bancaires**
 | Méthode | Endpoint | Description | Swagger |
 |---------|----------|-------------|---------|
-| **GET** | `/api/comptes` | Liste tous les comptes | ✅ |
-| **GET** | `/api/comptes/{id}` | Détails d'un compte par ID | ✅ |
-| **GET** | `/api/comptes/{id}/operations` | Opérations d'un compte | ✅ |
-| **GET** | `/api/comptes/{id}/page-operations` | Opérations paginées | ✅ |
-| **POST** | `/api/comptes` | Créer un nouveau compte | ✅ |
-| **POST** | `/api/comptes/{id}/depot` | Effectuer un dépôt | ✅ |
-| **POST** | `/api/comptes/{id}/retrait` | Effectuer un retrait | ✅ |
+| **GET** | `/api/comptes` | Liste tous les comptes | Oui |
+| **GET** | `/api/comptes/{id}` | Détails d'un compte par ID | Oui |
+| **GET** | `/api/comptes/{id}/operations` | Opérations d'un compte | Oui |
+| **GET** | `/api/comptes/{id}/page-operations` | Opérations paginées | Oui |
+| **POST** | `/api/comptes` | Créer un nouveau compte | Oui |
+| **POST** | `/api/comptes/{id}/depot` | Effectuer un dépôt | Oui |
+| **POST** | `/api/comptes/{id}/retrait` | Effectuer un retrait | Oui |
 
-### 👥 **Gestion des Clients**
+### **Gestion des Clients**
 | Méthode | Endpoint | Description | Swagger |
 |---------|----------|-------------|---------|
 | **GET** | `/api/clients` | Liste tous les clients | ✅ |
 | **GET** | `/api/clients/{id}` | Client par ID | ✅ |
 | **GET** | `/api/clients/search` | Recherche par mot-clé | ✅ |
 
-## 🚀 Installation & Déploiement
+## Installation & Déploiement
 
 ### Prérequis
 - Java JDK 8 ou supérieur
@@ -93,34 +93,34 @@ curl -X GET "http://localhost:8080/digital-banking/api/comptes"
 curl -X GET "http://localhost:8080/digital-banking/api/clients/1"
 ```
 
-## 📋 Fonctionnalités Implémentées
+## Fonctionnalités Implémentées
 
-### ✅ **Gestion des Comptes**
+### **Gestion des Comptes**
 - [x] Création de comptes (courant/épargne)
 - [x] Consultation des soldes
 - [x] Historique des opérations
 - [x] Opérations de dépôt/retrait
 - [x] Pagination des transactions
 
-### ✅ **Gestion des Clients**
+### **Gestion des Clients**
 - [x] Inscription des clients
 - [x] Recherche multicritères
 - [x] Consultation des détails
 - [x] Association client-compte
 
-### ✅ **Sécurité & Validation**
+### **Sécurité & Validation**
 - [x] Validation des données
 - [x] Gestion des erreurs
 - [x] Contrôle des soldes
 - [x] Journalisation des opérations
 
-## 🧪 Tests API avec Swagger
+## Tests API avec Swagger
 1. Accédez à l'interface Swagger : `http://localhost:8080/digital-banking/swagger-ui`
 2. Explorez les endpoints disponibles
 3. Testez les opérations directement depuis l'interface
 4. Consultez les modèles de données
 
-## 🗂️ Structure du Projet
+## Structure du Projet
 ```
 src/
 ├── main/
@@ -135,18 +135,7 @@ src/
 └── test/                               # Tests unitaires
 ```
 
-## 👩💻 Auteur
-**Réalisé par : Erimi Houda**
+## Auteur
+**Réalisé par : Rania Kettani**
 
-## 📞 Support
-Pour toute question ou problème :
-1. Vérifiez la documentation Swagger
-2. Consultez les logs du serveur
-3. Vérifiez la connexion à la base de données
 
-## 📄 Licence
-Projet académique - Tous droits réservés
-
----
-
-*Développé avec ❤️ pour la gestion bancaire numérique*
