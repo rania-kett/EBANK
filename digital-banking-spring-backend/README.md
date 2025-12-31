@@ -42,7 +42,22 @@ Dans Swagger, vous pouvez :
 ## Test couche DAO
 
 ### Gestion des clients 
-Afficher la liste des clients : 
+Afficher la liste des clients 
+
 <img width="490" height="424" alt="image" src="https://github.com/user-attachments/assets/0f2147c7-3cff-4593-8b76-20ae5752e3a3" />
+
+Rechercher tous les clients
+
+<img width="603" height="412" alt="image" src="https://github.com/user-attachments/assets/2582b34b-2932-44ba-ae2f-c0ee9a2a2a93" />
+
+Rechercher par mot clé
+
+<img width="1587" height="390" alt="Admin (3)" src="https://github.com/user-attachments/assets/b4bd913a-a900-4786-aa40-18d0c3e5dc7d" />
+
+Afficher client par son id
+
+<img width="517" height="178" alt="image" src="https://github.com/user-attachments/assets/d8788f99-643d-439e-8f71-55975fba097e" />
+
+
 
 
