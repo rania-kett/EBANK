@@ -52,7 +52,7 @@ Rechercher tous les clients
 
 Rechercher par mot clé
 
-<img width="1587" height="390" alt="Admin (3)" src="https://github.com/user-attachments/assets/b4bd913a-a900-4786-aa40-18d0c3e5dc7d" />
+<img width="513" height="126" alt="image" src="https://github.com/user-attachments/assets/a2f7d20f-6f44-40ea-977f-29932d7bccfe" />
 
 Afficher client par son id
 
