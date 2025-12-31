@@ -88,4 +88,4 @@ L'application sera accessible à l'adresse : `http://localhost:4200/`
 - Angular Router pour la navigation
 - HTTP Client pour les communications API
 
-### Réalisé par : RANIA KETTANI
+## Réalisé par : RANIA KETTANI
