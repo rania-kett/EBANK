@@ -29,45 +29,15 @@ Application backend pour système bancaire développée en Java (JEE). Gère les
 
 ## 🚀 Fonctionnalités principales
 
-### 📋 Gestion des comptes
-**Liste des comptes**
-- `GET /api/accounts` - Voir tous les comptes
-
-![Liste des comptes API](images/api-accounts-list.png)
-*Exemple de réponse JSON avec tous les comptes*
-
-**Détails d'un compte**
-- `GET /api/accounts/{id}` - Voir un compte spécifique
-
-![Détails compte API](images/api-account-detail.png)
-*Détails d'un compte avec ses informations*
-
-**Opérations d'un compte**
-- `GET /api/accounts/{id}/operations` - Historique des transactions
-
-![Opérations compte API](images/api-account-operations.png)
-*Liste des opérations d'un compte spécifique*
-
-### 👥 Gestion des clients
-**Liste des clients**
-- `GET /api/customers` - Voir tous les clients
-
-**Recherche client**
-- `GET /api/customers/search` - Rechercher par nom/email
-
-**Détails client**
-- `GET /api/customers/{id}` - Voir un client spécifique
-
 ## 📖 Documentation API
-Accéder à Swagger : `http://localhost:8080/swagger-ui.html`
+Accéder à Swagger : `http://localhost:8085/swagger-ui.html`
 
 Dans Swagger, vous pouvez :
-✅ Tester tous les endpoints
-✅ Voir les paramètres requis
-✅ Exécuter des requêtes directement
+- Tester tous les endpoints
+- Voir les paramètres requis
+- Exécuter des requêtes directement
 
-![Swagger Interface](images/swagger-interface.png)
-*Interface Swagger avec exemples de requêtes*
+<img width="1847" height="968" alt="image" src="https://github.com/user-attachments/assets/5d70a038-6a79-427e-8485-667ece53a0f3" />
 
 ## 📝 Structure des données
 
