@@ -16,16 +16,16 @@ Application backend pour système bancaire développée en Java (JEE). Gère les
 
 
 ### Table customers
-![Table customers](images/table-customers.png)
-*Exemple de données clients avec id, email et nom*
+<img width="470" height="111" alt="image" src="https://github.com/user-attachments/assets/0e871314-de7e-4aa9-9cd8-bdefb64207fd" />
+
 
 ### Table bank_accounts
-![Table bank_accounts](images/table-accounts.png)
-*Comptes bancaires avec solde, type et client associé*
+<img width="908" height="163" alt="image" src="https://github.com/user-attachments/assets/c5455912-701e-474a-bd9b-47a4bf5042d9" />
+
 
 ### Table account_operation
-![Table operations](images/table-operations.png)
-*Historique des opérations avec dates et montants*
+<img width="1091" height="212" alt="image" src="https://github.com/user-attachments/assets/bac3071f-70c5-486f-afed-09026cc4491b" />
+
 
 ## 🚀 Fonctionnalités principales
 
