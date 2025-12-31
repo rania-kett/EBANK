@@ -88,7 +88,7 @@ npm install
 ng serve
 ```
 
-➡️ Accès via : [http://localhost:4200/](http://localhost:4200/)
+ Accès via : [http://localhost:4200/](http://localhost:4200/)
 
 ---
 
@@ -127,7 +127,7 @@ Base de données relationnelle **MySQL** avec les tables principales suivantes :
 
 Swagger est intégré pour tester et documenter les API.
 
-➡️ Accès Swagger :
+ Accès Swagger :
 [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)
 
 Avec Swagger, vous pouvez :
