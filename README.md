@@ -66,7 +66,6 @@ Elle offre une interface moderne et sécurisée pour la gestion des opérations 
 * Garde d’authentification
 * Garde d’autorisation basée sur les rôles
   
-<img width="995" height="343" alt="image" src="https://github.com/user-attachments/assets/e1b2e594-e17c-4cb5-867f-5bc3a0d283a1" />
 
 #### Routage
 
@@ -152,6 +151,8 @@ Avec Swagger, vous pouvez :
 * Gestion des rôles utilisateurs
 * Protection des endpoints sensibles
 * Sécurisation des routes côté frontend et backend
+
+<img width="995" height="343" alt="image" src="https://github.com/user-attachments/assets/e1b2e594-e17c-4cb5-867f-5bc3a0d283a1" />
 
 ---
 
