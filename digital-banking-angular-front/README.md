@@ -87,3 +87,5 @@ L'application sera accessible à l'adresse : `http://localhost:4200/`
 - RxJS pour la programmation réactive
 - Angular Router pour la navigation
 - HTTP Client pour les communications API
+
+### Réalisé par : RANIA KETTANI
