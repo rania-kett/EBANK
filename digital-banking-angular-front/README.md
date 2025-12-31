@@ -3,6 +3,18 @@
 ## Vue d'ensemble
 Application web frontend développée avec Angular 17.0.7, conçue pour interagir avec une API Spring Boot backend. Cette application permet une gestion complète des opérations bancaires incluant la gestion des clients, des comptes, et un système d'authentification sécurisé.
 
+## Captures d'écran
+
+### 1. Page d'authentification
+<img width="1216" height="379" alt="image" src="https://github.com/user-attachments/assets/8bf2c156-c369-4e48-9fda-f1ed1388bdc8" />
+
+
+### 2. Tableau de bord des comptes
+<img width="1587" height="619" alt="Admin (2)" src="https://github.com/user-attachments/assets/e6596000-cf09-4e25-b0a2-ace142e93fa2" />
+
+### 3. Gestion des clients
+<img width="891" height="307" alt="image" src="https://github.com/user-attachments/assets/9376278a-5fc3-4b9a-a87e-838945cde6d9" />
+
 ## Informations techniques
 - **Framework**: Angular 17.0.7
 - **Build**: Angular CLI
@@ -17,8 +29,6 @@ Application web frontend développée avec Angular 17.0.7, conçue pour interagi
 - **Gestion des comptes** (`Accounts`) : Interface pour la supervision des comptes bancaires
 - **Relations clients-comptes** (`Customers-Accounts`) : Interface de liaison entre clients et leurs comptes
 - **Authentification** (`Login`) : Interface de connexion sécurisée pour les utilisateurs
-<img width="891" height="307" alt="image" src="https://github.com/user-attachments/assets/d5f6a3c6-4492-4f66-9f31-05bc91a93ec9" />
-
 
 ### Services
 - **Service clients** (`Customers-Services`) : Gestion des opérations clientèles
